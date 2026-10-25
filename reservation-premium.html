@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>予約はこちら</title>
+  <!-- CSS -->
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+    <!-- Googleフォント -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Kaisei+Decol&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Kaisei+Decol&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="home" class="header">
+        <div class="header-inner">
+            <a href="index.html">
+              <img src="image/PC_sitelogo.png" alt="サイトロゴ">
+            </a>
+          <nav>
+            <ul>
+              <li class="nav-dropdown">
+                <a href="tour-guide.html">見学について</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="tour-guide.html">無料コースについて</a></li>
+                        <li><a href="tour-guide-premium.html">プレミアムコースについて</a></li>
+                    </ul>
+                </li>
+              <li><a href="distillery.html">佐竹蒸溜所について</a></li>
+              <li><a href="facility.html">施設案内</a></li>
+              <li class="nav-dropdown active">
+                <a href="reservation-free.html">予約はこちら</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="reservation-free.html">無料コースの予約</a></li>
+                        <li><a href="reservation-premium.html">プレミアムコースの予約</a></li>
+                    </ul>
+                    </li>
+              <li><a href="news.html">お知らせ</a></li>
+              <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </div>
+        <div class="tour-guide-hero">
+            <picture>
+                <source media="(max-width: 800px)" srcset="image/SPheaderimg.png">
+                <img class="header-img" src="image/hero-reservation.png" alt="ヘッダー画像">
+            </picture>
+          <div class="tour-guide-title">
+            <h1>予約について</h1>
+          </div>
+        </div>
+    </header>
+        <h3 class="reservation-text">●10名様以上の場合は5日前までにご予約下さい。※ご予約がない場合、混雑で入場制限する事がございます。<br>
+            参加後アンケート回答をSNSで共有していただいた方に限定グッズを配布しております。</h3>
+    <div class="reservation-section">
+        <div class="reservation-tabs">
+            <div class="reservation-inactivetab">
+                <a href="reservation-free.html" class="course-tab">
+                    <h3>無料見学コース</h3>
+                </a>
+            </div>
+            <div class="reservation-tab">
+                <a href="reservation-premium.html" class="course-tab">
+                    <h3>プレミアムコース</h3>
+                </a>
+            </div>
+        </div>
+
+            <div class="reservation-container">
+                <div class="reservation-box">
+                        <p>料金：5000円</p>
+                        <p>コース内容(無料プランの内容に付随します)</p>
+                    <div class="reservation-content">
+                        <h2>プライベートエリア探索</h2>
+                        <img class="reservation-image" src="image/reservation-content-p.png" alt="森林探索">
+                    </div>
+                    <div class="reservation-content">
+                        <h2>ガイド付き見学</h2>
+                        <img class="reservation-image" src="image/reservation-content-p2.png" alt="施設案内自由見学">
+                    </div>
+                    <div class="reservation-content">
+                        <h2>プレミアムテイスティング</h2>
+                        <img class="reservation-image" src="image/reservation-content-p3.png" alt="テイスティング">
+                    </div>
+                    <div class="reservation-content">
+                        <h2>プレミアム記念グッズ</h2>
+                        <img class="reservation-image" src="image/reservation-content-p4.png" alt="ショップ">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <iframe class="calendar" src="https://calendar.google.com/calendar/embed?src=33e31bfdca9cb2dbfd84a2a66745f73bb38f09019f02fadcd65a4e097b065eff%40group.calendar.google.com&ctz=Asia%2FTokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <!-- 🟢 日付選択フォーム -->
+        <form action="reservation-form.html" method="GET" class="date-select">
+            <label for="reservation-date">予約希望日</label>
+        
+            <input
+            type="date"
+            id="reservation-date"
+            name="date"
+            required
+            >
+        
+            <button type="submit">この日程で予約する</button>
+        </form>
+  <footer>
+        <div class="footer">
+            <h2>SATAKE WHISKEY DISTILLERY</h2>
+            <div class="footer-sns">
+                <a href="#"><img src="image/footer-x.png" alt="X"></a>
+                <a href="#"><img src="image/footer-ins.png" alt="Instagram"></a>
+                <a href="#"><img src="image/footer-yt.png" alt="YouTube"></a>
+            </div>
+        </div>
+        <h3>© 2026 SATAKE DISTILLERY. All Rights Reserved.</h3>
+        <a href="#home" class="page-top">TOPへ</a>
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

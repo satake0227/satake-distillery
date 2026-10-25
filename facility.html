@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>施設案内</title>
+  <!-- CSS -->
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+    <!-- Googleフォント -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Kaisei+Decol&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Kaisei+Decol&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="home" class="header">
+        <div class="header-inner">
+            <a href="index.html">
+              <img src="image/PC_sitelogo.png" alt="サイトロゴ">
+            </a>
+          <nav>
+           <ul>
+              <li class="nav-dropdown">
+                <a href="tour-guide.html">見学について</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="tour-guide.html">無料コースについて</a></li>
+                        <li><a href="tour-guide-premium.html">プレミアムコースについて</a></li>
+                    </ul>
+                </li>
+              <li><a href="distillery.html">佐竹蒸溜所について</a></li>
+              <li class="active"><a href="facility.html">施設案内</a></li>
+              <li class="nav-dropdown">
+                <a href="reservation-free.html">予約はこちら</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="reservation-free.html">無料コースの予約</a></li>
+                        <li><a href="reservation-premium.html">プレミアムコースの予約</a></li>
+                    </ul>
+                    </li>
+              <li><a href="news.html">お知らせ</a></li>
+              <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="tour-guide-hero">
+            <picture>
+                <source media="(max-width: 800px)" srcset="image/SPheaderimg.png">
+                <img class="header-img" src="image/hero-facility.png" alt="ヘッダー画像">
+            </picture>
+          <div class="tour-guide-title">
+            <h1>施設案内</h1>
+          </div>
+        </div>
+    </header>
+    <div class="facility-list">
+        <div class="facility-main">
+            <h2>蒸溜所見学</h2>
+            <p>蒸留室や熟成庫など、ウイスキーが生まれる現場を間近に見学できます。</p>
+            <img class="" src="image/facility.png" alt="蒸留所">
+        </div>
+        <div class="facility-main">
+            <h2>テイスティングラウンジ</h2>
+            <p>木の温もりを感じる空間で、佐竹蒸溜所のウイスキーと向き合う時間を。</p>
+            <img class="" src="image/facility2.png" alt="テイスティングラウンジ">
+        </div>
+        <div class="facility-main">
+            <h2>ショップ</h2>
+            <p>佐竹蒸溜所ならではの商品や、旅の記憶を持ち帰ることができます。</p>
+            <img class="" src="image/facility3.png" alt="ショップ">
+        </div>
+        <div class="facility-main">
+            <h2>森林探索エリア</h2>
+            <p>蒸溜所を囲む豊かな森の中で、自然の音や空気を感じながら、ゆっくりとした時間を過ごせます。</p>
+            <img class="" src="image/facility3.png" alt="森林探索エリア">
+        </div>
+    </div>
+  <footer>
+        <div class="footer">
+            <h2>SATAKE WHISKEY DISTILLERY</h2>
+            <div class="footer-sns">
+                <a href="#"><img src="image/footer-x.png" alt="X"></a>
+                <a href="#"><img src="image/footer-ins.png" alt="Instagram"></a>
+                <a href="#"><img src="image/footer-yt.png" alt="YouTube"></a>
+            </div>
+        </div>
+        <h3>© 2026 SATAKE DISTILLERY. All Rights Reserved.</h3>
+        <a href="#home" class="page-top">TOPへ</a>
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

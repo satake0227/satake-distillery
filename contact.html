@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合せ</title>
+  <!-- CSS -->
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+    <!-- Googleフォント -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Kaisei+Decol&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Kaisei+Decol&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="home" class="header">
+        <div class="header-inner">
+            <a href="index.html">
+              <img src="image/PC_sitelogo.png" alt="サイトロゴ">
+            </a>
+          <nav>
+            <ul>
+              <li class="nav-dropdown">
+                <a href="tour-guide.html">見学について</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="tour-guide.html">無料コースについて</a></li>
+                        <li><a href="tour-guide-premium.html">プレミアムコースについて</a></li>
+                    </ul>
+                </li>
+              <li><a href="distillery.html">佐竹蒸溜所について</a></li>
+              <li><a href="facility.html">施設案内</a></li>
+              <li class="nav-dropdown">
+                <a href="reservation-free.html">予約はこちら</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="reservation-free.html">無料コースの予約</a></li>
+                        <li><a href="reservation-premium.html">プレミアムコースの予約</a></li>
+                    </ul>
+                    </li>
+              <li><a href="news.html">お知らせ</a></li>
+              <li class="active"><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="tour-guide-hero">
+            <picture>
+                <source media="(max-width: 800px)" srcset="image/SPheaderimg.png">
+                <img class="header-img" src="image/header-contact-hero.png" alt="ヘッダー画像">
+            </picture>
+          <div class="tour-guide-title">
+            <h1>お問い合わせ</h1>
+          </div>
+        </div>
+    </header>
+    <div class="contact">
+        <div class="name">
+            <h3>お名前
+                <span class="required">必須</span>
+            </h3>
+            <input type="text" name="name" class="name-input" placeholder="山田 太郎" required>
+        </div>
+        <div class="mail">
+            <h3>メールアドレス
+                <span class="required">必須</span>
+            </h3>
+            <input type="text" mail="mail" class="name-input" placeholder="〇〇〇〇＠〇〇〇〇" required>
+        </div>
+        <div class="message">
+            <h3>お問い合わせ内容
+                <span class="required">必須</span>
+            </h3>
+            <textarea
+                    name="message"
+                    class="message-input"
+                    placeholder="お問い合わせ内容をご入力ください"
+                    required
+            ></textarea>
+        </div>
+    </div>
+    <label class="privacy-check">
+        <input type="checkbox">
+            <span><span class="highlight">個人情報の取扱いに関する同意事項</span>に同意します。</span>
+    </label>
+
+    <button type="submit" class="submit-button">
+    入力内容を送信
+    </button>
+
+  <footer>
+        <div class="footer">
+            <h2>SATAKE WHISKEY DISTILLERY</h2>
+            <div class="footer-sns">
+                <a href="#"><img src="image/footer-x.png" alt="X"></a>
+                <a href="#"><img src="image/footer-ins.png" alt="Instagram"></a>
+                <a href="#"><img src="image/footer-yt.png" alt="YouTube"></a>
+            </div>
+        </div>
+        <h3>© 2026 SATAKE DISTILLERY. All Rights Reserved.</h3>
+        <a href="#home" class="page-top">TOPへ</a>
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
