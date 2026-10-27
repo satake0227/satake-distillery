@@ -28,12 +28,18 @@
     
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="hero-top">
   <header id="home" class="header">
         <div class="header-inner">
             <a href="index.html">
               <img src="image/PC_sitelogo.png" alt="サイトロゴ">
             </a>
+            <button class="hamburger-menu" aria-label="メニューを開く">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
+
           <nav>
             <ul>
               <li class="nav-dropdown">
@@ -59,8 +65,8 @@
         </div>
         <div class="tour-guide-hero">
             <picture>
-                <source media="(max-width: 800px)" srcset="image/SPheaderimg.png">
-                <img class="header-img" src="image/header-contact-hero.png" alt="ヘッダー画像">
+                <img class="hero-pc" src="image/header-contact-hero.png" alt="ヘッダー画像">
+                <img class="hero-sp" src="image/header-contact-hero-sp.png" alt="ヘッダー画像">
             </picture>
           <div class="tour-guide-title">
             <h1>お問い合わせ</h1>
@@ -78,7 +84,7 @@
             <h3>メールアドレス
                 <span class="required">必須</span>
             </h3>
-            <input type="text" mail="mail" class="name-input" placeholder="〇〇〇〇＠〇〇〇〇" required>
+            <input type="text" mail="mail" class="mail-input" placeholder="〇〇〇〇＠〇〇〇〇" required>
         </div>
         <div class="message">
             <h3>お問い合わせ内容
@@ -103,7 +109,9 @@
 
   <footer>
         <div class="footer">
+          <div class="scroll-title">
             <h2>SATAKE WHISKEY DISTILLERY</h2>
+          </div>
             <div class="footer-sns">
                 <a href="#"><img src="image/footer-x.png" alt="X"></a>
                 <a href="#"><img src="image/footer-ins.png" alt="Instagram"></a>

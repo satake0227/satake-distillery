@@ -60,3 +60,51 @@ if (pageTop) {
   window.addEventListener("resize", updatePageTop);
   updatePageTop();
 }
+
+/* 🟢 スマホメニューの開閉 */
+const hamburger = document.querySelector(".hamburger-menu");
+const nav = document.querySelector(".header-inner nav");
+const headerInner = document.querySelector(".header-inner"); // 🟢 追加
+
+// 🟢 追加：メニューの開閉をまとめる
+function closeMenu() {
+  nav.classList.remove("is-open");
+  hamburger.setAttribute("aria-expanded", "false");
+  hamburger.setAttribute("aria-label", "メニューを開く");
+  hamburger.innerHTML = '<span></span><span></span><span></span>';
+}
+
+hamburger.addEventListener("click", () => {
+  const isOpen = nav.classList.toggle("is-open");
+
+  hamburger.setAttribute("aria-expanded", isOpen);
+  hamburger.setAttribute(
+    "aria-label",
+    isOpen ? "メニューを閉じる" : "メニューを開く"
+  );
+
+  hamburger.innerHTML = isOpen
+    ? '<span class="close-mark">×</span>'
+    : '<span></span><span></span><span></span>';
+});
+
+// 🟢 追加：ヘッダー・メニューの外側をクリックしたら閉じる
+document.addEventListener("click", (event) => {
+  if (
+    nav.classList.contains("is-open") &&
+    !headerInner.contains(event.target)
+  ) {
+    closeMenu();
+  }
+});
+
+/* 🟢 ローディング画面 */
+// window.addEventListener("load", () => {
+//   const loading = document.querySelector("#loading");
+
+//   if (!loading) return;
+
+//   setTimeout(() => {
+//     loading.classList.add("is-hidden");
+//   }, 1000);
+// });

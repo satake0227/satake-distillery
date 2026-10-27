@@ -197,14 +197,14 @@ opacity: 1;
 }
 
 .intro-text {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-z-index: 1;
-color: #FFFFFF;
-font-size: 32px;
-text-align: center;
+  position: absolute;
+  left: 7%;
+  bottom: 10%;
+  z-index: 1;
+
+  color: #fff;
+  font-size: 32px;
+  text-align: left;
 }
 
 .intro-image {
@@ -286,6 +286,7 @@ text-align: center;
   margin-top: 116px;
   margin-bottom: 75px;
   font-size: 36px;
+  color: #5A5047;
 }
 .distillery{
   margin-left: 113px;
@@ -405,7 +406,9 @@ transform: scaleX(1);
   margin-top: 116px;
   margin-bottom: 75px;
   font-size: 36px;
+  color: #5A5047;
 }
+
 .facility p{
   margin-bottom: 61px;
 }
@@ -472,7 +475,7 @@ text-align: center;
 font-size: 12px;
 margin-top: 90px;
 padding-bottom: 20px;
-}
+} 
 
 .header-inner {
 position: fixed;
@@ -522,17 +525,17 @@ background-color: #5D5148;
 }
 
 /* 無料コース */
-.tour-guide-hero{
+.hero-pc{
 position: relative;
 }
-.tour-guide-hero picture {
-display: block;
+.hero-pc {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.tour-guide-hero .header-img {
-width: 100%;
-height: auto;
-display: block;
+.hero-sp {
+  display: none;
 }
 
 /* テキストを画像の上に配置 */
@@ -551,7 +554,7 @@ margin-bottom: 20px;
 }
 
 .tour-guide-title h1 {
-font-size: 48px;
+font-size: 36px;
 margin: 0;
 }
 
@@ -559,10 +562,15 @@ margin: 0;
 .tour-guide-title h2 {
 white-space: nowrap;
 }
+
+.tour-guide-hero {
+  position: relative;
+}
+
 .tour-guide-hero img{
 width: 100%;
 height: auto;
-display: block;
+
 }
 
 .header-inner nav li {
@@ -721,10 +729,17 @@ width: 687px;
 height: auto;
 margin: auto;
 margin-top: 30px;
+max-width: 100%;
 }
+
 .tour-guide-main img{
-margin-bottom: 30px;
+  display: block;
+  width: 100%;      
+  max-width: 100%;  
+  height: auto;
+  margin-bottom: 30px;
 }
+
 .tour-guide-main p{
 font-family: "Noto Sans JP", sans-serif;
 font-optical-sizing: auto;
@@ -809,7 +824,10 @@ width: 688px;
 height: auto;
 margin: auto;
 margin-top: 30px;
+max-width: 100%;
 }
+
+
 
 .tour-guide-shinrin p {
 width: 688px;
@@ -825,10 +843,6 @@ margin-bottom: 30px;
 width: 688px;
 max-width: 100%;
 margin: 0 auto;
-}
-.tour-guide-tasting .tour-guide-image {
-display: block;
-width: 100%;
 }
 .tour-guide-tasting h3,
 .tour-guide-tasting p {
@@ -940,6 +954,7 @@ margin-top: 116px;
 .tour-guide-distillery-image{
 display: block;
 width: 903px;
+max-width: 100%;
 height: auto;
 margin: auto;
 }
@@ -1129,6 +1144,11 @@ font-size: 16px;
 }
 
 /* 予約はこちら */
+
+.reservation-text p{
+  font-size: 16px;
+}
+
 .reservation-text {
 width: fit-content;
 max-width: calc(100% - 40px);
@@ -1455,6 +1475,7 @@ margin: 0 0 8px;
 display: block;
 width: 600px;
 height: 50px;
+max-width: 100%;
 padding: 10px 15px;
 border: 1px solid #5D5148;
 border-radius: 4px;
@@ -1556,6 +1577,31 @@ margin-bottom: 116px;
   display: none;
 }
 
+/* 🟢 ローディング画面 */
+/* .loading {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF9EE;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.loading img {
+  width: 200px;
+  max-width: 60%;
+  height: auto;
+} */
+
+/* 🟢 ローディング終了時 */
+/* .loading.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+} */
+
 /* ここからスマホ版 */
 
 @media (max-width: 800px){
@@ -1566,9 +1612,9 @@ margin-bottom: 116px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 32px;
-    height: 24px;
-    padding: 0;
+    width: 48px;
+    height: 48px;
+    padding: 12px 8px;
     border: none;
     background: transparent;
     cursor: pointer;
@@ -1580,13 +1626,17 @@ margin-bottom: 116px;
     height: 5px;
     background-color: #5A5047;
   }
-  .header-img, .header-snslink{
-    display: none;
-  }
-  .header-sp-img{
+  .header-img{
     display: block;
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    object-fit: cover;
+    display: none;  
+  }
+
+  .header-snslink{
+    display: none;
   }
   .reservation-link {
     position: relative;
@@ -1613,10 +1663,454 @@ margin-bottom: 116px;
     white-space: nowrap;
   }
 
-  /* イントロ画像のサイズどうするか */
-  /* .intro-image{
-    width: 317px;
+  .tour {
+    padding: 30px 20px;
+  }
+
+  /* カードを縦並びにする */
+  .tour-card,
+  .course-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+  }
+
+  /* カードの幅を画面内に収める */
+  .course-item {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    min-width: 0;
+  }
+
+  /* 画像をカードの幅に合わせる */
+  .course-list img {
+    display: block;
+    width: 100%;
+    max-width: 420px;
     height: auto;
-    margin: 0 auto;
-  } */
+  }
+  .distillery {
+    margin-left: 0; /* 🟢 親要素の左余白を解除 */
+    padding: 0 20px;
+    margin-top: 25px;
+  }
+
+  .distillery h2 {
+    margin: 0 0 30px;
+    text-align: center;
+  }
+
+  .distillery p {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    text-align: left;
+  }
+
+  
+/* 🟢 スマホ版 */
+.tour-guide-title h1 {
+  font-size: 24px;
 }
+
+.tour-guide-title h2{
+  font-size: 16px;
+}
+
+/* 下線処理無効 */
+
+/* .distillery-commitment h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  margin-top: 8px;
+  background: none;
+  border: none;
+  border-radius: 0;
+  transform: none;
+  transition: none;
+
+  
+  border-bottom: 2px solid #fff;
+  box-sizing: border-box;
+}  */
+
+
+  .facility {
+    margin-left: 0; /* 🟢 親要素の左余白を解除 */
+    padding: 0 20px;
+    margin-top: 25px;
+  }
+
+  .facility h2 {
+    margin: 0 0 30px;
+    text-align: center;
+  }
+
+  .facility p {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    text-align: left;
+  }
+  
+  .access{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-top: 0;
+  }
+
+  .access h2 {
+    margin-top: 0;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 30px;
+}
+
+  .access-item {
+    display: flex;
+    flex-direction: column; /* 縦並びにする */
+    align-items: center;    /* 中央揃え */
+    gap: 30px;              /* マップとテキストの間隔 */
+}
+
+.access-item iframe {
+    width: 100%;
+    max-width: 600px;
+}
+
+.map-text {
+    width: 100%;
+    max-width: 600px;
+    padding: 0;
+    list-style: none;
+}
+.footer h2{
+  font-size: 40px;
+}
+/* 🟢 横スクロールの設定 */
+.scroll-title {
+  margin-top: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* 🟢 文字を右から左へ流す */
+.scroll-title h2 {
+  margin-top: 0;
+  display: inline-block;
+  padding-left: 100%;
+  animation: text-scroll 13s linear infinite;
+}
+
+@keyframes text-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* 🟢 SNSアイコンを横並びにする */
+.footer-sns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* アイコン同士の余白 */
+}
+
+/* 🟢 アイコンの幅を108pxにする */
+.footer-sns img {
+  width: 108px;
+  height: auto;
+  display: block;
+}
+
+/* 予約について */
+.hero-pc {
+  display: none;
+}
+
+.hero-sp {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* 予約について・スマホ版 */
+
+.reservation-text {
+  width: auto;
+  max-width: none;
+  margin: 116px 20px 0;
+}
+
+.reservation-text{
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+/* 🟢 予約エリア全体 */
+.reservation-section {
+  width: auto;
+  max-width: none;
+  margin: 30px 16px 0;
+}
+
+/* 🟢 コースタブ */
+.reservation-tabs {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.reservation-tab,
+.reservation-inactivetab {
+  flex: 1;
+  min-width: 0;
+  width: auto;
+  height: 64px;
+  font-size: 14px;
+  border-radius: 16px 16px 0 0;
+}
+
+/* 🟢 緑色の外側 */
+.reservation-container {
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 16px 10px;
+  border-radius: 0 0 20px 20px;
+}
+
+/* 🟢 白い内側 */
+.reservation-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-content: start;
+  gap: 24px;
+
+  width: 72%;
+  height: auto;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 24px 10px;
+  border-radius: 16px;
+}
+
+/* 🟢 各コンテンツ */
+.reservation-content {
+  width: 100%;
+  min-width: 0;
+  text-align: center;
+}
+
+.reservation-content h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+/* 🟢 画像 */
+.reservation-image {
+  display: block;
+  width: 295px;
+  max-width: none;
+  height: auto;
+  margin: 0 auto;
+}
+
+.map {
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.date-select{
+  margin-bottom: 50px;
+}
+
+.date-select button {
+  margin-bottom: 0;
+}
+
+/* 無料コースについて */
+.header-img {
+  display: none;
+}
+
+/* 🟢 スマホ用画像を表示 */
+
+.hero-top{
+  margin-top: 0;/* ドロップダウンメニュー実装時変更：71px → 0 */
+}
+
+/* ここまで   */
+.header-sp-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  object-fit: initial;
+}
+
+.route-time .route-text {
+  width: auto;
+  max-width: calc(100vw - 100px);
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+
+.monolog {
+  /* 🟢 幅を統一 */
+  width: 688px;
+  max-width: calc(100% - 40px);
+  margin: 0 auto 30px;
+}
+
+.facility-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 266px;
+  height: 60px;
+  background-color: #5D5148;
+  color: #FFFFFF;
+  border-radius: 24px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+  }
+
+.start{
+  margin-top: 50px;
+}
+
+.facility-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* 各施設の間隔 */
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.facility-main {
+  width: 100%;
+}
+
+.facility-main img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.news{
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.name{
+  margin-top: 50px;
+}
+.submit-button{
+  margin-bottom: 50px;
+}
+
+.distillery-commitment h2::after, .facility-card h2::after {
+  content: "→";
+  margin-left: 10px;
+  transform: none;
+  transition: none;
+  background-color: transparent;
+}
+
+.map-text {
+  width: 100%;
+  max-width: none; /* 🟢 600pxの制限を解除 */
+  margin-left: 0; /* 🟢 左の余白を解除 */
+  padding: 0;
+  list-style: none;
+}
+
+.header-inner {
+  position: relative;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 32px;
+  height: 4px;
+  background-color: #5A5047;
+}
+
+/* 🟢 メニューを画面上に表示 */
+.header-inner nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #FFF9EE;
+  z-index: 1001;
+}
+
+.header-inner nav .nav-dropdown ul {
+  background-color: #E8E0D4;
+}
+
+.header-inner nav a {
+  font-size: 24px; 
+}
+
+.header-inner nav.is-open {
+  display: block;
+}
+
+.header-inner nav > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 30px 0;
+}
+.hamburger-menu .close-mark {
+  display: block;
+  font-size: 36px;
+  line-height: 24px;
+  font-weight: 400;
+  background: transparent;
+}
+}
+
+
