@@ -201,10 +201,12 @@ opacity: 1;
   left: 7%;
   bottom: 10%;
   z-index: 1;
-
   color: #fff;
   font-size: 32px;
   text-align: left;
+  font-family: "Kaisei Decol", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .intro-image {
