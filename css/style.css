@@ -2105,7 +2105,7 @@ margin-bottom: 116px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12x; 
+  gap: 12px; 
   padding: 15px 0;
 }
 .hamburger-menu .close-mark {
@@ -2139,5 +2139,3 @@ margin-bottom: 116px;
     z-index: 2001;
   }
 }
-
-
