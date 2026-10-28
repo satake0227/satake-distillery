@@ -2105,8 +2105,8 @@ margin-bottom: 116px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px; /* 24px → 16px */
-  padding: 24px 0;
+  gap: 12x; 
+  padding: 15px 0;
 }
 .hamburger-menu .close-mark {
   display: block;
@@ -2122,7 +2122,7 @@ margin-bottom: 116px;
   position: static;
   width: 100%;
   min-width: 0;
-  padding: 10px 0;
+  padding: 5px 0;
   background-color: #E8E0D4;
 }
 .header-inner nav .nav-dropdown.is-open .dropdown-menu {
