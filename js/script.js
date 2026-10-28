@@ -98,6 +98,19 @@ document.addEventListener("click", (event) => {
   }
 });
 
+// 🟢 スマホ版ドロップダウンの開閉
+document.querySelectorAll(".nav-dropdown > a").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    // スマホ表示のときだけ処理
+    if (window.innerWidth <= 800) {
+      e.preventDefault();
+
+      const parent = link.parentElement;
+      parent.classList.toggle("is-open");
+    }
+  });
+});
+
 /* 🟢 ローディング画面 */
 // window.addEventListener("load", () => {
 //   const loading = document.querySelector("#loading");

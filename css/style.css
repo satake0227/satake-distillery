@@ -98,6 +98,10 @@ display: block;
 padding: 15px 8px;
 }
 
+.header-inner nav .nav-dropdown.is-open .dropdown-menu {
+  display: block;
+}
+
 .hero{
   position: relative;
 }
@@ -1259,8 +1263,12 @@ font-style: normal;
 }
 
 .reservation-image{
-width: 480px;
-height: auto;
+  display: block;
+  width: 100%;          
+  max-width: 240px;
+  height: auto;
+  margin: 0 auto;
+
 }
 .calendar{
 display: block;
