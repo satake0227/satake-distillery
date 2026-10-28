@@ -61,55 +61,62 @@ if (pageTop) {
   updatePageTop();
 }
 
+
 /* 🟢 スマホメニューの開閉 */
 const hamburger = document.querySelector(".hamburger-menu");
 const nav = document.querySelector(".header-inner nav");
-const headerInner = document.querySelector(".header-inner"); // 🟢 追加
+const headerInner = document.querySelector(".header-inner");
 
-// 🟢 追加：メニューの開閉をまとめる
 function closeMenu() {
+  if (!nav || !hamburger) return;
+
   nav.classList.remove("is-open");
   hamburger.setAttribute("aria-expanded", "false");
   hamburger.setAttribute("aria-label", "メニューを開く");
-  hamburger.innerHTML = '<span></span><span></span><span></span>';
+  hamburger.innerHTML = "<span></span><span></span><span></span>";
 }
 
-hamburger.addEventListener("click", () => {
-  const isOpen = nav.classList.toggle("is-open");
+if (hamburger && nav && headerInner) {
+  hamburger.addEventListener("click", (event) => {
+    // 🟢 ボタンのクリック処理
+    event.stopPropagation();
 
-  hamburger.setAttribute("aria-expanded", isOpen);
-  hamburger.setAttribute(
-    "aria-label",
-    isOpen ? "メニューを閉じる" : "メニューを開く"
-  );
+    const isOpen = nav.classList.toggle("is-open");
 
-  hamburger.innerHTML = isOpen
-    ? '<span class="close-mark">×</span>'
-    : '<span></span><span></span><span></span>';
-});
+    hamburger.setAttribute("aria-expanded", String(isOpen));
+    hamburger.setAttribute(
+      "aria-label",
+      isOpen ? "メニューを閉じる" : "メニューを開く"
+    );
 
-// 🟢 追加：ヘッダー・メニューの外側をクリックしたら閉じる
-document.addEventListener("click", (event) => {
-  if (
-    nav.classList.contains("is-open") &&
-    !headerInner.contains(event.target)
-  ) {
-    closeMenu();
-  }
-});
+    hamburger.innerHTML = isOpen
+      ? '<span class="close-mark">×</span>'
+      : "<span></span><span></span><span></span>";
+  });
 
-// 🟢 スマホ版ドロップダウンの開閉
-document.querySelectorAll(".nav-dropdown > a").forEach((link) => {
-  link.addEventListener("click", (e) => {
-    // スマホ表示のときだけ処理
-    if (window.innerWidth <= 800) {
-      e.preventDefault();
-
-      const parent = link.parentElement;
-      parent.classList.toggle("is-open");
+  // 🟢 メニュー外をタップしたら閉じる
+  document.addEventListener("click", (event) => {
+    if (
+      nav.classList.contains("is-open") &&
+      !headerInner.contains(event.target)
+    ) {
+      closeMenu();
     }
   });
-});
+
+  // 🟢 ドロップダウンの開閉
+  document.querySelectorAll(".nav-dropdown > a").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (window.innerWidth <= 800) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        link.parentElement.classList.toggle("is-open");
+      }
+    });
+  });
+}
+
 
 /* 🟢 ローディング画面 */
 // window.addEventListener("load", () => {
