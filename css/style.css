@@ -1640,6 +1640,11 @@ margin-bottom: 116px;
   .header-snslink{
     display: none;
   }
+
+  .intro-text{
+    font-size: 22px;
+  }
+
   .reservation-link {
     position: relative;
     display: flex;
@@ -1876,7 +1881,7 @@ margin-bottom: 116px;
   flex: 1;
   min-width: 0;
   width: auto;
-  height: 64px;
+  height: 56px;
   font-size: 14px;
   border-radius: 16px 16px 0 0;
 }
@@ -1899,7 +1904,7 @@ margin-bottom: 116px;
   align-content: start;
   gap: 24px;
 
-  width: 72%;
+  width: 90%;
   height: auto;
   min-width: 0;
   box-sizing: border-box;
@@ -1923,7 +1928,7 @@ margin-bottom: 116px;
 .reservation-image {
   display: block;
   width: 100%;         
-  max-width: 240px;  
+  max-width: 295px;  
   height: auto;
   margin: 0 auto;
 }
