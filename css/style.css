@@ -31,8 +31,8 @@ p {
 .header-inner nav{
   flex: 1;
   min-width: 0;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 66px;
+  margin-right: 66px;
   font-size: 16px;
   font-size: clamp(10px, 1.1vw, 16px);    
 }
@@ -2092,6 +2092,8 @@ margin-bottom: 116px;
   box-sizing: border-box;
   background-color: #FFF9EE;
   z-index: 1001;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .header-inner nav .nav-dropdown ul {
