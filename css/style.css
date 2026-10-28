@@ -98,10 +98,6 @@ display: block;
 padding: 15px 8px;
 }
 
-.header-inner nav .nav-dropdown.is-open .dropdown-menu {
-  display: block;
-}
-
 .hero{
   position: relative;
 }
@@ -2116,6 +2112,19 @@ margin-bottom: 116px;
   line-height: 24px;
   font-weight: 400;
   background: transparent;
+}
+
+/* スマホ版ドロップダウンメニュー開閉 */
+.header-inner nav .dropdown-menu {
+  display: none;
+  position: static;
+  width: 100%;
+  min-width: 0;
+  padding: 10px 0;
+  background-color: #E8E0D4;
+}
+.header-inner nav .nav-dropdown.is-open .dropdown-menu {
+  display: block;
 }
 }
 
