@@ -2126,6 +2126,16 @@ margin-bottom: 116px;
 .header-inner nav .nav-dropdown.is-open .dropdown-menu {
   display: block;
 }
+
+.header-inner {
+    position: relative;
+    z-index: 2000;
+  }
+  
+  .hamburger-menu {
+    position: relative;
+    z-index: 2001;
+  }
 }
 
 
