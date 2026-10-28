@@ -1263,12 +1263,8 @@ font-style: normal;
 }
 
 .reservation-image{
-  display: block;
-  width: 100%;          
-  max-width: 240px;
-  height: auto;
-  margin: 0 auto;
-
+  width: 480px;
+    height: auto;
 }
 .calendar{
 display: block;
@@ -1930,8 +1926,8 @@ margin-bottom: 116px;
 /* 🟢 画像 */
 .reservation-image {
   display: block;
-  width: 295px;
-  max-width: none;
+  width: 100%;         
+  max-width: 240px;  
   height: auto;
   margin: 0 auto;
 }
